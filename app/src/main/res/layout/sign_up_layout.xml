@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#cc000000"
+    tools:context="com.example.chatting.SignUp">
+    <ImageView
+        android:id="@+id/profil_img"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/profil"
+        android:layout_marginBottom="15dp"/>
+    <EditText
+        android:id="@+id/sign_up_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:textColor="#CCCCCC"
+        android:textColorHint="#FFFFFF"
+        android:fontFamily="@font/goyang"
+        android:hint="id 입력"
+        />
+    <EditText
+        android:id="@+id/sign_up_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:textColor="#CCCCCC"
+        android:textColorHint="#FFFFFF"
+        android:fontFamily="@font/goyang"
+        android:hint="이름 입력"
+        />
+    <EditText
+        android:id="@+id/sign_up_pw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:textColor="#CCCCCC"
+        android:textColorHint="#FFFFFF"
+        android:fontFamily="@font/goyang"
+        android:hint="pw 입력"
+        />
+    <EditText
+        android:id="@+id/sign_up_pw2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:textColor="#CCCCCC"
+        android:textColorHint="#FFFFFF"
+        android:fontFamily="@font/goyang"
+        android:hint="pw 재 입력"
+        />
+    <Button
+        android:id="@+id/sign_up_button2"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="sign up"
+        android:background="#66000000"
+        android:textColor="#FF8C00"
+        android:layout_marginLeft="5dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/goyang"
+        android:padding="14dp" />
+    <Button
+        android:id="@+id/sign_up_cancel"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="cancel"
+        android:background="#66000000"
+        android:textColor="#FF8C00"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/goyang"
+        android:padding="14dp"/>
+
+</LinearLayout>
