@@ -38,6 +38,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -100,7 +101,7 @@ public class MainFragment extends Fragment {
             Manifest.permission.WRITE_EXTERNAL_STORAGE
     };
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
-    private String upLoadServerUri="https://nanatsu-sin.herokuapp.com/upload";
+    private String upLoadServerUri="";
     private static final int PICK_FROM_ALBUM =1;
     int serverResponseCode = 0;
     private String ur;
@@ -108,6 +109,7 @@ public class MainFragment extends Fragment {
     private Cursor c;
     String getImgURL="";
     String getImgName="";
+    private FirebaseAnalytics mFirebaseAnalytics;
     public MainFragment() {
         super();
     }
@@ -132,9 +134,9 @@ public class MainFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         setHasOptionsMenu(true);
-        mStorageRef = FirebaseStorage.getInstance().getReferenceFromUrl("gs://myapp-6c652.appspot.com");
+        mStorageRef = FirebaseStorage.getInstance().getReferenceFromUrl("");
         try {
-            mSocket = IO.socket("https://nanatsu-sin.herokuapp.com/");
+            mSocket = IO.socket("");
             mSocket.on(Socket.EVENT_CONNECT,onConnect);
             mSocket.on(Socket.EVENT_DISCONNECT,onDisconnect);
             mSocket.on(Socket.EVENT_CONNECT_ERROR, onConnectError);
@@ -150,6 +152,8 @@ public class MainFragment extends Fragment {
         } catch (URISyntaxException e) {
             throw new RuntimeException(e);
         }
+
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(getContext());
         startSignIn();
     }
 

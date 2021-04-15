@@ -74,7 +74,7 @@ public class bigImage extends AppCompatActivity {
         progressBar.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         progressBar.setIndeterminate(true);
         progressBar.setCancelable(true);
-        storageRef = FirebaseStorage.getInstance().getReferenceFromUrl("gs://myapp-6c652.appspot.com");
+        storageRef = FirebaseStorage.getInstance().getReferenceFromUrl("");
         storageRef.child("images/"+s).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {

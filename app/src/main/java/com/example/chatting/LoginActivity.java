@@ -41,7 +41,7 @@ public class LoginActivity extends Activity {
 
 
         try {
-            mSocket = IO.socket("https://nanatsu-sin.herokuapp.com/");
+            mSocket = IO.socket("");
             mSocket.connect();
         } catch (URISyntaxException e) {
             throw new RuntimeException(e);

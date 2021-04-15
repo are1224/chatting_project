@@ -75,10 +75,10 @@ public class SignUp extends Activity {
         GradientDrawable drawable= (GradientDrawable)getApplicationContext().getDrawable(R.drawable.back_round2);
         imageView.setBackground(drawable);
         imageView.setClipToOutline(true);
-        mStorageRef3 = FirebaseStorage.getInstance().getReferenceFromUrl("gs://myapp-6c652.appspot.com");
+        mStorageRef3 = FirebaseStorage.getInstance().getReferenceFromUrl("");
 
         try {
-            mSocket = IO.socket("https://nanatsu-sin.herokuapp.com/");
+            mSocket = IO.socket("");
             mSocket.on("sign_up",set_Sign_Up);
             mSocket.connect();
         } catch (URISyntaxException e) {

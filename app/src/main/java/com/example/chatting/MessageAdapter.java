@@ -39,7 +39,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         int layout = -1;
-        mStorageRef2 = FirebaseStorage.getInstance().getReferenceFromUrl("gs://myapp-6c652.appspot.com");
+        mStorageRef2 = FirebaseStorage.getInstance().getReferenceFromUrl("");
 
         switch (viewType) {
             case Message.TYPE_MESSAGE:
